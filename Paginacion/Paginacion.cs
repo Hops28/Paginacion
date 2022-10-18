@@ -188,14 +188,14 @@ namespace Paginacion
             }
 
             // Se revisa en la cola por si acaso
-            //foreach (Proceso p in procesosEnEspera)
-            //{
-            //    if (p.name.Equals(nombreProceso))
-            //    {
-            //        noSeRepite = false;
-            //        break;
-            //    }
-            //}
+            foreach (Proceso p in procesosEnEspera)
+            {
+                if (p.name.Equals(nombreProceso))
+                {
+                    noSeRepite = false;
+                    break;
+                }
+            }
 
             if (!noSeRepite)
             {
