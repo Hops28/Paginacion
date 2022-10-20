@@ -6,16 +6,39 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace Paginacion
 {
     public partial class Paginacion : Form
     {
+        // El tipo de animación que va a tener el movimiento de la presentación
+        Transition Transicion = new Transition(new TransitionType_EaseInEaseOut(1000));
+
         public Paginacion()
         {
             InitializeComponent();
+
+            // Luego de cargar los componentes se crea un hilo que va a ser
+            // utilizado para usar un delay en paralelo con el flujo actual
+            ThreadStart Delegado = new ThreadStart(MoverPresentacion);
+            Thread Hilo = new Thread(Delegado);
+
+            // Se comienza el hilo
+            Hilo.Start();
+        }
+
+        void MoverPresentacion()
+        {
+            // Se espera por 4.5 segundos
+            Thread.Sleep(4500);
+
+            // Se realiza el movimiento al panel 'Presentacion'
+            Transicion.add(Presentacion, "Left", 720);
+            Transicion.run();
         }
 
         private void Cerrar_MouseHover(object sender, EventArgs e)

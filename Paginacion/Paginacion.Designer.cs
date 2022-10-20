@@ -51,7 +51,6 @@
             this.ListaProcesosEspera = new System.Windows.Forms.ListBox();
             this.lbl9 = new System.Windows.Forms.Label();
             this.lbl8 = new System.Windows.Forms.Label();
-            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.lbl7 = new System.Windows.Forms.Label();
             this.ListaProcesos = new System.Windows.Forms.ListBox();
             this.BordeVentana = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -82,8 +81,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl6 = new System.Windows.Forms.Label();
             this.lblPaginasOcupadas = new System.Windows.Forms.Label();
+            this.Presentacion = new System.Windows.Forms.Panel();
+            this.LogoUNI = new System.Windows.Forms.PictureBox();
+            this.Cerrar = new System.Windows.Forms.PictureBox();
             this.Espacio1.SuspendLayout();
             this.Espacio3.SuspendLayout();
+            this.Presentacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoUNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -394,20 +398,6 @@
             this.lbl8.TabIndex = 25;
             this.lbl8.Text = "Procesos";
             // 
-            // Cerrar
-            // 
-            this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cerrar.Image = global::Paginacion.Properties.Resources.cancel1;
-            this.Cerrar.Location = new System.Drawing.Point(200, 0);
-            this.Cerrar.Name = "Cerrar";
-            this.Cerrar.Size = new System.Drawing.Size(40, 40);
-            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Cerrar.TabIndex = 0;
-            this.Cerrar.TabStop = false;
-            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
-            this.Cerrar.MouseLeave += new System.EventHandler(this.Cerrar_MouseLeave);
-            this.Cerrar.MouseHover += new System.EventHandler(this.Cerrar_MouseHover);
-            // 
             // lbl7
             // 
             this.lbl7.AutoSize = true;
@@ -691,12 +681,46 @@
             this.lblPaginasOcupadas.TabIndex = 22;
             this.lblPaginasOcupadas.Text = "0";
             // 
+            // Presentacion
+            // 
+            this.Presentacion.BackColor = System.Drawing.Color.White;
+            this.Presentacion.Controls.Add(this.LogoUNI);
+            this.Presentacion.Location = new System.Drawing.Point(0, 0);
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.Size = new System.Drawing.Size(720, 420);
+            this.Presentacion.TabIndex = 23;
+            // 
+            // LogoUNI
+            // 
+            this.LogoUNI.Image = global::Paginacion.Properties.Resources.logoUNIblanco;
+            this.LogoUNI.Location = new System.Drawing.Point(45, 30);
+            this.LogoUNI.Name = "LogoUNI";
+            this.LogoUNI.Size = new System.Drawing.Size(630, 350);
+            this.LogoUNI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoUNI.TabIndex = 0;
+            this.LogoUNI.TabStop = false;
+            // 
+            // Cerrar
+            // 
+            this.Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cerrar.Image = global::Paginacion.Properties.Resources.cancel1;
+            this.Cerrar.Location = new System.Drawing.Point(200, 0);
+            this.Cerrar.Name = "Cerrar";
+            this.Cerrar.Size = new System.Drawing.Size(40, 40);
+            this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Cerrar.TabIndex = 0;
+            this.Cerrar.TabStop = false;
+            this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
+            this.Cerrar.MouseLeave += new System.EventHandler(this.Cerrar_MouseLeave);
+            this.Cerrar.MouseHover += new System.EventHandler(this.Cerrar_MouseHover);
+            // 
             // Paginacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(720, 420);
+            this.Controls.Add(this.Presentacion);
             this.Controls.Add(this.lblPaginasOcupadas);
             this.Controls.Add(this.lbl6);
             this.Controls.Add(this.panel1);
@@ -732,6 +756,8 @@
             this.Espacio1.PerformLayout();
             this.Espacio3.ResumeLayout(false);
             this.Espacio3.PerformLayout();
+            this.Presentacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoUNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -793,6 +819,8 @@
         private System.Windows.Forms.ComboBox cbProcesos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTerminarProceso;
+        private System.Windows.Forms.Panel Presentacion;
+        private System.Windows.Forms.PictureBox LogoUNI;
     }
 }
 
